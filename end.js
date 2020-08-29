@@ -10,8 +10,8 @@ const MAX_HIGH_SCORES = 5;
 
 finalScore.innerText = mostRecentScore;
 
-email.addEventListener('keyup', () => {
-    saveScoreBtn.disabled = !email.value;
+username.addEventListener('keyup', () => {
+    saveScoreBtn.disabled = !username.value;
 });
 
 saveHighScore = (e) => {
