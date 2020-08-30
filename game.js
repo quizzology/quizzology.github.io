@@ -16,12 +16,8 @@ let questions = [];
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 5;
 const DIFFICULTY = '';
-const CATEGORY = randomNumber(9,15);
 const TYPE = '';
-
-function randomNumber(min, max) {  
-    return Math.random() * (max - min) + min; 
-}  
+const CATEGORY = Math.floor(Math.random() * (15 - 9) + 9); 
 
 fetch(
     'https://opentdb.com/api.php?amount='+MAX_QUESTIONS+'&category='+CATEGORY+'&difficulty=easy&type=multiple'
