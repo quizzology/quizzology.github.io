@@ -17,7 +17,7 @@ fetch(
     'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple'
 )
     .then((res) => {
-        localStorage.setItem('questions',res.json)
+        localStorage.setItem('questions',res.json())
         return res.json();
     })
     .then((loadedQuestions) => {
