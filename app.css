@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap');
 
 :root {
-  background-color: #60bee0;
+  background-color: radial-gradient(ellipse farthest-corner at center top, #60bee0 0%, #00008b 100%);
   font-size: 62.5%;
 }
 
