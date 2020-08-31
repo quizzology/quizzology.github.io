@@ -58,7 +58,7 @@ h3 {
 .container {
   width: 100vw;
   height: 100vh;
-  display: grid; /*flex*/
+  display: flex; /*grid*/
   justify-content: center;
   align-items: center;
   max-width: 80rem;
