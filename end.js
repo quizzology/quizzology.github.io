@@ -3,12 +3,14 @@ const email= document.getElementById('email');
 const saveScoreBtn = document.getElementById('saveScoreBtn');
 const finalScore = document.getElementById('finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
+const lifeScore = localStorage.getItem('lifeScore')
 
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
 const MAX_HIGH_SCORES = 5;
 
 finalScore.innerHTML = mostRecentScore+finalScore.innerHTML;
+localStorage.setItem('lifeScore', Number(lifeScore));
 
 username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value;
