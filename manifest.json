@@ -1,0 +1,16 @@
+{
+  "name": "Quizzology: The Quiz Game",
+  "short_name": "Quizzology",
+  "icons": [
+    {
+      "src": "https://quizzology.vercel.app/Quizzology%20Logo.png",
+      "sizes": "145x145",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#00008b",
+  "background_color": "#00008b",
+  "start_url": "index.html",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}
