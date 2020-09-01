@@ -142,3 +142,9 @@ input {
 input::placeholder {
   color: #aaa;
 }
+/*Font Awesome*/
+.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.fa-refresh:before{content:"\f021";}
+.fa-home:before{content:"\f015";}
+.fa-play:before{content:"\f04b";}
+.fa-trophy:before{content:"\f091";}
