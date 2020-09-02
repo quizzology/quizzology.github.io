@@ -31,3 +31,9 @@ saveHighScore = (e) => {
 	localStorage.setItem('email', email.value)
     window.location.assign('/');
 };
+if(Number(mostRecentScore)<=30)
+	console.log('You can do better!')
+if(Number(mostRecentScore)==40)
+	console.log('Good!')
+if(Number(mostRecentScore)==40)
+	console.log('Awesome!')
