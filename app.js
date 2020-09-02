@@ -6,6 +6,6 @@ window.onload = () => {
              .register('./sw.js');
   }
 }
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
  document.getElementsByClassName('pwa-promote')[0].hidden='false';
 }
