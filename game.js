@@ -20,7 +20,7 @@ const TYPE = '';
 const CATEGORY = Math.floor(Math.random() * (25 - 9) + 9); 
 
 fetch(
-    'https://opentdb.com/api.php?amount='+MAX_QUESTIONS+'&category='+CATEGORY+'&difficulty=easy&type=multiple'
+    'https://opentdb.com/api.php?amount='+(MAX_QUESTIONS*5)+'&category='+CATEGORY+'&difficulty=medium&type=multiple'
 )
     .then((res) => {
         return res.json();
@@ -111,7 +111,7 @@ choices.forEach((choice) => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();
 			CORRECT_ANS.parentElement.classList.remove('correct')
-        }, 3000);
+        }, 2000);
     });
 });
 
