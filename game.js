@@ -20,7 +20,7 @@ const TYPE = '';
 const CATEGORY = Math.floor(Math.random() * (25 - 9) + 9); 
 
 fetch(
-    'https://opentdb.com/api.php?amount='+(MAX_QUESTIONS)+'&category='+CATEGORY+'&difficulty='+DIFFICULTY+'&type=multiple'
+    'https://opentdb.com/api.php?amount='+(MAX_QUESTIONS)+'&type=multiple'
 )
     .then((res) => {
         return res.json();
