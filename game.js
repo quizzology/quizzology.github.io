@@ -15,12 +15,12 @@ let questions = [];
 //CONSTANTS
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 5;
-const DIFFICULTY = '';
+const DIFFICULTY = {'easy','medium','hard'}[Math.floor(Math.random() * arr.length)];
 const TYPE = '';
 const CATEGORY = Math.floor(Math.random() * (25 - 9) + 9); 
 
 fetch(
-    'https://opentdb.com/api.php?amount='+(MAX_QUESTIONS*5)+'&category='+CATEGORY+'&difficulty=medium&type=multiple'
+    'https://opentdb.com/api.php?amount='+(MAX_QUESTIONS*5)+'&category='+CATEGORY+'&difficulty='+DIFFICULTY+'&type=multiple'
 )
     .then((res) => {
         return res.json();
