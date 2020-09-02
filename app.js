@@ -7,5 +7,5 @@ window.onload = () => {
   }
 }
 if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
- document.getElementsByClassName('pwa-promote')[0].hidden='false';
+ document.getElementsByClassName('pwa-promote')[0].hidden='true';
 }
