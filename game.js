@@ -20,7 +20,7 @@ const TYPE = '';
 const CATEGORY = Math.floor(Math.random() * (25 - 9) + 9); 
 
 fetch(
-    'https://opentdb.com/api.php?amount='+(MAX_QUESTIONS)+'&category='+CATEGORY+'&difficulty=medium&type=multiple'
+    'https://opentdb.com/api.php?amount='+(MAX_QUESTIONS)+'&category='+CATEGORY+'&difficulty='+DIFFICULTY+'&type=multiple'
 )
     .then((res) => {
         return res.json();
@@ -64,7 +64,7 @@ startGame = () => {
 };
 
 getNewQuestion = () => {
-    if (/*availableQuesions.length === 0 ||*/ questionCounter >= MAX_QUESTIONS) {
+    if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
         //go to the end page
         return window.location.assign('end.html');
