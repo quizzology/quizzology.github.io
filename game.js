@@ -15,7 +15,7 @@ let questions = [];
 //CONSTANTS
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 5;
-const DIFFICULTY = {'easy','medium','hard'}[Math.floor(Math.random() * arr.length)];
+const DIFFICULTY = ['easy','medium','hard'][Math.floor(Math.random() * self.length)];
 const TYPE = '';
 const CATEGORY = Math.floor(Math.random() * (25 - 9) + 9); 
 
