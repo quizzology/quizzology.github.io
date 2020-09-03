@@ -3,7 +3,7 @@
   "short_name": "Quizzology",
   "icons": [
     {
-      "src": "https://quizzology.vercel.app/Quizzology%20Logo.png",
+      "src": "https://quizzology.github.io/Quizzology%20Logo.png",
       "sizes": "145x145",
       "type": "image/png"
     }
