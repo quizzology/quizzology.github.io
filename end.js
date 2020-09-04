@@ -25,7 +25,7 @@ const shareData = {
   }
 
 
-document.getElementById('share-icon').addEventListener('click', 
+document.getElementById('share-score').addEventListener('click', 
   document.getElementsByClassName('pwa-promote')[0].addEventListener('click', async () => {
   try {
     await navigator.share(shareData)
