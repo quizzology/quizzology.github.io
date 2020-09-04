@@ -35,5 +35,6 @@ if(Number(mostRecentScore)==40)
 	console.log('Awesome!')
 
 function makeScreenshot() {// Takes a screenshot
-        html2canvas(document.getElementsByTagName("body"), {scale: 2}).then(return canvas;)
+        html2canvas(document.getElementsByTagName("body"), {scale: 2})
+		.then(canvas => return canvas;)
     }
