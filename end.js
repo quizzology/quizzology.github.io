@@ -48,7 +48,7 @@ document.getElementById('share-score').addEventListener('click',
   } catch(err) {
     console.log(err)
   }
-});
+}));
 
 if(Number(mostRecentScore)<=30)
 	console.log('You can do better!')
