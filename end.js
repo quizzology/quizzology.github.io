@@ -12,6 +12,17 @@ const MAX_HIGH_SCORES = 5;
 finalScore.innerHTML = mostRecentScore+finalScore.innerHTML;
 localStorage.setItem('lifeScore', Number(lifeScore)+mostRecentScore);
 
+document.getElementById('share-icon').addEventListener('click', function(){
+	
+						      navigator.share({
+                    title: 'I scored '+mostRecentScore+' in Quizzology!',
+                    text: 'Can you beat it?',
+                    url: 'https://quizzology.github.io'
+		    //files: 
+                })
+                .then(() => console.log('Successful share'))
+                .catch((error) => console.log('Error sharing', error)))
+
 saveHighScore = (e) => {
     e.preventDefault();
 
@@ -35,28 +46,5 @@ if(Number(mostRecentScore)==40)
 	console.log('Awesome!')
 
 function makeScreenshot() {// Takes a screenshot
-        html2canvas(document.getElementById("screenshot"), {scale: 2}).then(canvas => {
-            var main = document.getElementById("main");
-            while (main.firstChild) {
-              main.removeChild(main.firstChild);
-            }
-
-            // for Firefox
-            main.appendChild(canvas);
-
-            // for Safari
-            //canvas.toBlob(function(blob) {
-            //  var newImg = document.createElement('img'),
-            //      url = URL.createObjectURL(blob);
-              
-            //  newImg.onload = function() {
-            //    URL.revokeObjectURL(url);
-            //  };
-
-            //  newImg.src = url;
-            //  newImg.title = "some title";
-            //  newImg.alt = "some alternative text";
-            //  main.appendChild(newImg);
-            //});
-        });
+        html2canvas(document.getElementsByTagName("body"), {scale: 2}).then(return canvas;)
     }
