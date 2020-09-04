@@ -29,7 +29,7 @@ saveHighScore = (e) => {
 };
 
 var capture;
-document.onload = html2canvas(document.getElementsByTagName('html')[0]).then(canvas => {
+html2canvas(document.getElementsByTagName('html')[0]).then(canvas => {
     capture=(canvas)
 });
 
