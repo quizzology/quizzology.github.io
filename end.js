@@ -56,3 +56,8 @@ if(Number(mostRecentScore)==40)
 	console.log('Good!')
 if(Number(mostRecentScore)==40)
 	console.log('Awesome!')
+
+if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+  
+ document.getElementsByClassName('share-score')[0].hidden='true';
+}
