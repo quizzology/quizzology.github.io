@@ -54,7 +54,7 @@ if(Number(mostRecentScore)<=30)
 	console.log('You can do better!')
 if(Number(mostRecentScore)==40)
 	console.log('Good!')
-if(Number(mostRecentScore)==40)
+if(Number(mostRecentScore)>40)
 	console.log('Awesome!')
 
 if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
