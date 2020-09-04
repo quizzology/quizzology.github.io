@@ -12,11 +12,18 @@ const MAX_HIGH_SCORES = 5;
 finalScore.innerHTML = mostRecentScore+finalScore.innerHTML;
 localStorage.setItem('lifeScore', Number(lifeScore)+mostRecentScore);
 
+var capture;
+document.onload = html2canvas(document.getElementsByTagName('html')[0]).then(canvas => {
+    capture=(canvas)
+});
+
 const shareData = {
   title: 'Quizzology',
   text: 'I scored '+mostRecentScore+' in Quizzology can you?',
   url: 'https://quizzology.github.io',
+  files: capture
   }
+
 
 document.getElementById('share-icon').addEventListener('click', 
   document.getElementsByClassName('pwa-promote')[0].addEventListener('click', async () => {
