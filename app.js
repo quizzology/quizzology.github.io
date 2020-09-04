@@ -21,33 +21,6 @@ document.getElementById('pwa-install').addEventListener('click', (e) => {
   });
 });
 
-function makeScreenshot() {// Takes a screenshot
-        html2canvas(document.getElementById("screenshot"), {scale: 2}).then(canvas => {
-            var main = document.getElementById("main");
-            while (main.firstChild) {
-              main.removeChild(main.firstChild);
-            }
-
-            // for Firefox
-            main.appendChild(canvas);
-
-            // for Safari
-            //canvas.toBlob(function(blob) {
-            //  var newImg = document.createElement('img'),
-            //      url = URL.createObjectURL(blob);
-              
-            //  newImg.onload = function() {
-            //    URL.revokeObjectURL(url);
-            //  };
-
-            //  newImg.src = url;
-            //  newImg.title = "some title";
-            //  newImg.alt = "some alternative text";
-            //  main.appendChild(newImg);
-            //});
-        });
-    }
-
 if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
   
  document.getElementsByClassName('pwa-promote')[0].hidden='true';
