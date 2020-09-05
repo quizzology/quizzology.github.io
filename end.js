@@ -4,18 +4,22 @@ const saveScoreBtn = document.getElementById('saveScoreBtn');
 const finalScore = document.getElementById('finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 const motiv = document.getElementById('motivation')
-const lifeScore = localStorage.getItem('lifeScore')
-
+const totalScr = localStorage.getItem('totalScr')===null?localStorage.setItem('totalScr',mostRecentScore):localStorage.setItem('totalScr',Number(mostRecentScore)+Number(localStorage.getItem('totalScr')))
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-
 const MAX_HIGH_SCORES = 5;
 
 document.addEventListener("load",function(){if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
  document.getElementsByClassName('share-share')[0].hidden='true';
 }})
+document.onload = () => {
+if(Number(mostRecentScore)<=30)
+	motiv.write('You can do better');
+if(Number(mostRecentScore)==40)
+	motiv.write('Good');
+if(Number(mostRecentScore)>40)
+	motiv.write('Awesome');}
 
 finalScore.innerHTML += mostRecentScore;
-localStorage.setItem('lifeScore', Number(lifeScore)+mostRecentScore);
 
 saveHighScore = (e) => {
     e.preventDefault();
@@ -54,10 +58,3 @@ document.getElementById('share-score').addEventListener('click',
     console.log(err)
   }
 }));
-
-if(Number(mostRecentScore)<=30)
-	motiv.write('You can do better')
-if(Number(mostRecentScore)==40)
-	motiv.write('Good')
-if(Number(mostRecentScore)>40)
-	motiv.write('Awesome')
