@@ -12,12 +12,12 @@ document.addEventListener("load",function(){if(!(/Android|webOS|iPhone|iPad|iPod
  document.getElementsByClassName('share-share')[0].hidden='true';
 }})
 document.onload = () => {
-if(Number(mostRecentScore)<=30)
-	motiv.write('You can do better');
-if(Number(mostRecentScore)==40)
-	motiv.write('Good');
-if(Number(mostRecentScore)>40)
-	motiv.write('Awesome');
+if(Number(mostRecentScore)<=300)
+	motiv.innerText=('You can do better');
+if(Number(mostRecentScore)===400)
+	motiv.innerText=('Good');
+if(Number(mostRecentScore)>400)
+	motiv.innerText=('Awesome');
 history.pushState({
     id: 'Edit  URL'
 }, 'GAME OVER', 'GAMEEND.html');}
