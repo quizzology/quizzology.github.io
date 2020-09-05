@@ -10,7 +10,7 @@
   ],
   "theme_color": "#00008b",
   "background_color": "#00008b",
-  "start_url": "index.html",
+  "start_url": "/index.html?pwa=true",
   "display": "fullscreen",
   "orientation": "portrait"
 }
