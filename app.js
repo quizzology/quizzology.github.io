@@ -14,7 +14,7 @@ if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
   pass;
 }*/
 
-let deferredPrompt;
+var deferredPrompt;
 const addBtn = document.querySelector('#pwa-install');
 
 window.addEventListener('beforeinstallprompt', (e) => {
