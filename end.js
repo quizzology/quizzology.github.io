@@ -14,7 +14,7 @@ document.addEventListener("load",function(){if(!(/Android|webOS|iPhone|iPad|iPod
  document.getElementsByClassName('share-share')[0].hidden='true';
 }})
 
-finalScore.innerHTML = mostRecentScore+finalScore.innerHTML;
+finalScore.innerHTML += mostRecentScore;
 localStorage.setItem('lifeScore', Number(lifeScore)+mostRecentScore);
 
 saveHighScore = (e) => {
