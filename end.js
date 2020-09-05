@@ -3,6 +3,7 @@ const email= document.getElementById('email');
 const saveScoreBtn = document.getElementById('saveScoreBtn');
 const finalScore = document.getElementById('finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
+const motiv = document.getElementById('motivation')
 const lifeScore = localStorage.getItem('lifeScore')
 
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
@@ -55,11 +56,11 @@ document.getElementById('share-score').addEventListener('click',
 }));
 
 if(Number(mostRecentScore)<=30)
-	console.log('You can do better!')
+	motiv.write('You can do better')
 if(Number(mostRecentScore)==40)
-	console.log('Good!')
+	motiv.write('Good')
 if(Number(mostRecentScore)>40)
-	console.log('Awesome!')
+	motiv.write('Awesome')
 
 //HTML2CANVAS.html
 /*!
