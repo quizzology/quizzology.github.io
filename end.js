@@ -9,9 +9,9 @@ const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
 const MAX_HIGH_SCORES = 5;
 
-if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+document.addEventListener("load",function(){if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
  document.getElementsByClassName('share-share')[0].hidden='true';
-}
+}})
 
 finalScore.innerHTML = mostRecentScore+finalScore.innerHTML;
 localStorage.setItem('lifeScore', Number(lifeScore)+mostRecentScore);
