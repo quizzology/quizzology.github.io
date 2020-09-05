@@ -4,7 +4,7 @@ const saveScoreBtn = document.getElementById('saveScoreBtn');
 const finalScore = document.getElementById('finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 const motiv = document.getElementById('motivation')
-const totalScr = localStorage.getItem('totalScr')===null?localStorage.setItem('totalScr',mostRecentScore):localStorage.setItem('totalScr',Number(mostRecentScore)+Number(localStorage.getItem('totalScr')))
+const totalScr = localStorage.getItem('totalScr')===null && document.referrer==="" ?localStorage.setItem('totalScr',mostRecentScore):localStorage.setItem('totalScr',Number(mostRecentScore)+Number(localStorage.getItem('totalScr')))
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 const MAX_HIGH_SCORES = 5;
 
