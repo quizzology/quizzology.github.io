@@ -49,7 +49,7 @@ const shareData = {
   title: 'Quizzology',
   text: 'I scored '+mostRecentScore+' in Quizzology can you?',
   url: 'https://quizzology.github.io',
-  /*files: capture*/
+  files: capture
   }
 
 
