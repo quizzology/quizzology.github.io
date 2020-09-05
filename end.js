@@ -17,7 +17,10 @@ if(Number(mostRecentScore)<=30)
 if(Number(mostRecentScore)==40)
 	motiv.write('Good');
 if(Number(mostRecentScore)>40)
-	motiv.write('Awesome');}
+	motiv.write('Awesome');
+history.pushState({
+    id: 'Edit  URL'
+}, 'GAME OVER', 'GAMEEND.html');}
 
 finalScore.innerHTML += mostRecentScore;
 
