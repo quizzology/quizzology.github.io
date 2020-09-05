@@ -1,7 +1,6 @@
 var cacheName = 'Quizzology';
 var filesToCache = [
   '/',
-  '/index.html?pwa=true',
   '/app.css',
   '/game.css',
   '/game.js',
