@@ -117,5 +117,5 @@ choices.forEach((choice) => {
 
 incrementScore = (num) => {
     score += num;
-    scoreText.innerHTML = score+'<small class="total">/50</small>';
+    scoreText.innerHTML = score;
 };
