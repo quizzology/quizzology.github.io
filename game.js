@@ -13,7 +13,7 @@ let availableQuesions = [];
 
 let questions = [];
 //CONSTANTS
-const CORRECT_BONUS = 10;
+const CORRECT_BONUS = 100;
 const MAX_QUESTIONS = 5;
 const DIFFICULTY = ['easy','medium','hard'][Math.floor(Math.random() * self.length)];
 const TYPE = '';
